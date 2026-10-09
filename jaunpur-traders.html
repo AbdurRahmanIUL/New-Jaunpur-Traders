@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaunpur Traders | Premium Tobacco Wholesale — Alamganj, Jaunpur</title>
+<meta name="description" content="Jaunpur Traders, owned by Mohd Israil, is a trusted wholesale and retail tobacco supplier on Badi Masjid Road, Alamganj, Jaunpur. Fair pricing, consistent stock, 10+ years of service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #F2ECDA;
+    --paper-deep: #E8DFC4;
+    --ink: #221B12;
+    --green: #24402D;
+    --green-deep: #17281B;
+    --brass: #B4842A;
+    --brass-light: #D9A93F;
+    --rust: #8A3A28;
+    --line: rgba(34,27,18,0.16);
+    --max: 1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Mukta', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Zilla Slab', serif;
+    margin:0;
+    color:var(--green-deep);
+    font-weight:600;
+    line-height:1.15;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  ::selection{background:var(--brass-light); color:var(--green-deep);}
+  :focus-visible{outline:3px solid var(--brass); outline-offset:3px;}
+
+  /* subtle paper texture */
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:5; opacity:0.05; mix-blend-mode:multiply;
+    background-image:radial-gradient(circle at 1px 1px, #000 1px, transparent 0);
+    background-size:3px 3px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    max-width:var(--max); margin:0 auto;
+  }
+  .brand{
+    font-family:'Zilla Slab', serif;
+    font-weight:700; font-size:1.35rem; color:var(--green-deep);
+    letter-spacing:0.01em;
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .brand span{color:var(--brass); font-size:1.6rem; line-height:0;}
+  nav ul{list-style:none; display:flex; gap:34px; margin:0; padding:0;}
+  nav a{
+    font-weight:500; font-size:0.98rem; color:var(--ink);
+    position:relative; padding-bottom:4px;
+  }
+  nav a::after{
+    content:''; position:absolute; left:0; right:100%; bottom:0; height:2px;
+    background:var(--brass); transition:right .25s ease;
+  }
+  nav a:hover::after{right:0;}
+  .nav-call{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--green); color:var(--paper);
+    padding:10px 20px; border-radius:2px; font-weight:600; font-size:0.92rem;
+    border:1px solid var(--green);
+    transition:background .2s ease;
+  }
+  .nav-call:hover{background:var(--green-deep);}
+  .menu-btn{display:none; background:none; border:none; font-size:1.6rem; color:var(--green-deep); cursor:pointer;}
+
+  @media (max-width:860px){
+    nav{position:fixed; inset:64px 0 auto 0; background:var(--paper); border-bottom:1px solid var(--line);
+        transform:translateY(-120%); transition:transform .3s ease; padding:10px 28px 24px;}
+    nav.open{transform:translateY(0);}
+    nav ul{flex-direction:column; gap:18px;}
+    .nav-call{display:none;}
+    .menu-btn{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:88px 0 110px;
+    overflow:hidden;
+    background:
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:'';
+    position:absolute; top:-140px; right:-160px;
+    width:520px; height:520px; border-radius:50%;
+    background:radial-gradient(circle, rgba(180,132,42,0.16) 0%, transparent 70%);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;
+    position:relative; z-index:2;
+  }
+  .eyebrow-tag{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:0.85rem; font-weight:600; color:var(--rust);
+    margin-bottom:22px;
+  }
+  .eyebrow-tag::before{content:''; width:28px; height:1.5px; background:var(--rust); display:inline-block;}
+  .hero h1{
+    font-size:clamp(2.4rem, 4.6vw, 3.6rem);
+    margin-bottom:22px;
+    max-width:14ch;
+  }
+  .hero p.lede{
+    font-size:1.15rem; max-width:46ch; color:#453A28; margin-bottom:36px;
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:44px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 26px; font-weight:600; font-size:0.98rem;
+    border-radius:2px; border:1.5px solid transparent; cursor:pointer;
+  }
+  .btn-primary{background:var(--green); color:var(--paper); border-color:var(--green);}
+  .btn-primary:hover{background:var(--green-deep); border-color:var(--green-deep);}
+  .btn-ghost{border-color:var(--ink); color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink); color:var(--paper);}
+
+  .hero-meta{display:flex; gap:36px; flex-wrap:wrap;}
+  .hero-meta div{border-left:2px solid var(--brass); padding-left:14px;}
+  .hero-meta strong{display:block; font-family:'Zilla Slab',serif; font-size:1.5rem; color:var(--green-deep);}
+  .hero-meta span{font-size:0.86rem; color:#5b5138;}
+
+  /* the one bold moment: rotated stamp */
+  .stamp-wrap{position:relative; display:flex; justify-content:center; align-items:center;}
+  .photo-frame{
+    width:100%; aspect-ratio:4/5; border-radius:2px;
+    background:linear-gradient(160deg, #3a5940, var(--green-deep));
+    position:relative; overflow:hidden;
+    box-shadow:0 30px 60px -30px rgba(23,40,27,0.55);
+  }
+  .photo-frame::before{
+    content:'';
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 34px);
+  }
+  .hero-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.55; mix-blend-mode:luminosity;}
+  .photo-frame::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(23,40,27,0.15) 0%, rgba(23,40,27,0.78) 100%);}
+  .photo-frame .tex{z-index:2;
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column;
+    color:rgba(242,236,218,0.9); text-align:center; padding:30px;
+  }
+  .photo-frame .tex .glyph{font-size:3.2rem; margin-bottom:14px;}
+  .photo-frame .tex h4{color:var(--paper); font-size:1.4rem; font-weight:500;}
+  .photo-frame .tex p{color:rgba(242,236,218,0.75); font-size:0.92rem; margin-top:8px;}
+
+  .stamp{
+    position:absolute; bottom:-26px; left:-26px;
+    width:132px; height:132px; border-radius:50%;
+    background:var(--paper);
+    border:2px dashed var(--rust);
+    display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg);
+    box-shadow:0 14px 28px -14px rgba(34,27,18,0.35);
+  }
+  .stamp-inner{
+    text-align:center; color:var(--rust); font-weight:700;
+  }
+  .stamp-inner .num{font-family:'Zilla Slab',serif; font-size:1.9rem; display:block; line-height:1;}
+  .stamp-inner .lbl{font-size:0.62rem; letter-spacing:0.06em; display:block; margin-top:4px;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr; gap:70px;}
+    .hero{padding:50px 0 90px;}
+    .stamp-wrap{order:-1; max-width:340px; margin:0 auto;}
+  }
+
+  /* ---------- SECTION HEADER PATTERN ---------- */
+  .sec{padding:96px 0;}
+  .sec-head{max-width:640px; margin-bottom:56px;}
+  .sec-head .kicker{color:var(--rust); font-weight:600; font-size:0.88rem; margin-bottom:10px; display:block;}
+  .sec-head h2{font-size:clamp(1.8rem, 3vw, 2.5rem);}
+  .sec-head p{margin-top:14px; color:#4a4028; max-width:56ch;}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--green-deep); color:var(--paper);}
+  .about .sec-head h2{color:var(--paper);}
+  .about .sec-head .kicker{color:var(--brass-light);}
+  .about .sec-head p{color:rgba(242,236,218,0.8);}
+  .about-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; align-items:start;}
+  .about-body p{color:rgba(242,236,218,0.86); margin-bottom:18px; max-width:58ch;}
+  .about-body strong{color:var(--brass-light);}
+  .owner-card{
+    border:1px solid rgba(242,236,218,0.18);
+    padding:26px 28px; margin-top:10px;
+    border-left:3px solid var(--brass);
+  }
+  .owner-card .role{font-size:0.8rem; color:var(--brass-light); font-weight:600; letter-spacing:0.02em;}
+  .owner-card h3{color:var(--paper); font-size:1.3rem; margin-top:6px;}
+  .about-stats{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(242,236,218,0.18); border:1px solid rgba(242,236,218,0.18);}
+  .stat-box{background:var(--green-deep); padding:34px 26px;}
+  .stat-box strong{font-family:'Zilla Slab',serif; font-size:2.4rem; color:var(--brass-light); display:block;}
+  .stat-box span{font-size:0.88rem; color:rgba(242,236,218,0.75);}
+
+  /* ---------- WHY CHOOSE (feature list, not identical cards) ---------- */
+  .features{border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .feat-list{display:grid; grid-template-columns:repeat(4,1fr); border-left:1px solid var(--line);}
+  .feat{
+    padding:38px 28px; border-right:1px solid var(--line);
+  }
+  .feat .fnum{font-family:'Zilla Slab',serif; color:var(--brass); font-size:0.95rem; font-weight:600; margin-bottom:16px; display:block;}
+  .feat h3{font-size:1.08rem; margin-bottom:10px;}
+  .feat p{font-size:0.92rem; color:#4a4028;}
+  @media (max-width:860px){
+    .feat-list{grid-template-columns:1fr 1fr;}
+    .feat:nth-child(2n){border-right:1px solid var(--line);}
+  }
+  @media (max-width:560px){
+    .feat-list{grid-template-columns:1fr;}
+  }
+
+  /* ---------- PRODUCTS (market tag cards) ---------- */
+  .tags-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
+  .tag-card{
+    position:relative;
+    background:var(--paper-deep);
+    clip-path:polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+    padding:34px 30px 30px;
+    border:1px solid var(--line);
+    transition:transform .25s ease;
+  }
+  .tag-card:hover{transform:translateY(-6px);}
+  .tag-hole{
+    position:absolute; top:18px; left:18px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--paper); border:1.5px solid var(--brass);
+  }
+  .tag-img{width:100%; height:170px; object-fit:cover; margin-top:26px; filter:sepia(25%) saturate(90%);}
+  .tag-card h3{font-size:1.3rem; margin:20px 0 10px;}
+  .tag-card p{color:#4a4028; font-size:0.94rem; margin-bottom:22px;}
+  .tag-price{
+    display:flex; align-items:center; justify-content:space-between;
+    border-top:1px dashed var(--line); padding-top:16px;
+  }
+  .tag-price span{font-size:0.82rem; color:var(--rust); font-weight:600;}
+  .tag-link{font-weight:600; font-size:0.9rem; color:var(--green-deep); border-bottom:1.5px solid var(--brass);}
+
+  /* ---------- REVIEWS ---------- */
+  .reviews{background:var(--paper-deep); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .review-top{display:flex; align-items:baseline; gap:20px; margin-bottom:44px; flex-wrap:wrap;}
+  .review-top .score{font-family:'Zilla Slab',serif; font-size:3rem; color:var(--green-deep);}
+  .stars{color:var(--brass); font-size:1.1rem; letter-spacing:2px;}
+  .review-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
+  .review-card{background:var(--paper); border:1px solid var(--line); padding:30px;}
+  .review-card .stars{display:block; margin-bottom:16px;}
+  .review-card p{font-size:0.98rem; color:#3a3120; margin-bottom:20px;}
+  .review-who{display:flex; align-items:center; gap:12px;}
+  .avatar{
+    width:40px; height:40px; border-radius:50%;
+    background:var(--green); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Zilla Slab',serif; font-weight:600;
+  }
+  .review-who strong{display:block; font-size:0.94rem;}
+  .review-who span{font-size:0.8rem; color:#6b6045;}
+  @media (max-width:700px){.review-grid{grid-template-columns:1fr;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px;}
+  .info-list{list-style:none; padding:0; margin:0 0 34px;}
+  .info-list li{
+    display:flex; gap:16px; padding:20px 0; border-bottom:1px solid var(--line);
+  }
+  .info-list li:first-child{padding-top:0;}
+  .info-ic{
+    width:38px; height:38px; border-radius:50%; background:var(--green);
+    color:var(--paper); display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; font-size:1rem;
+  }
+  .info-list h4{font-size:0.98rem; margin-bottom:4px;}
+  .info-list p{font-size:0.92rem; color:#4a4028; margin:0;}
+  .map-frame{border:1px solid var(--line); overflow:hidden; height:230px;}
+  .map-frame iframe{width:100%; height:100%; border:0; filter:sepia(12%) saturate(85%);}
+
+  .form-card{background:var(--paper-deep); border:1px solid var(--line); padding:38px;}
+  .form-card h3{font-size:1.3rem; margin-bottom:8px;}
+  .form-card > p{color:#4a4028; font-size:0.94rem; margin-bottom:26px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block; font-size:0.85rem; font-weight:600; margin-bottom:8px; color:var(--green-deep);}
+  .field input, .field textarea{
+    width:100%; padding:13px 14px; font-family:'Mukta',sans-serif; font-size:0.96rem;
+    border:1px solid var(--line); background:var(--paper); color:var(--ink);
+    border-radius:2px;
+  }
+  .field textarea{resize:vertical; min-height:110px;}
+  .field input:focus, .field textarea:focus{border-color:var(--brass);}
+  .form-card .btn-primary{width:100%; justify-content:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--green-deep); color:rgba(242,236,218,0.85); padding:64px 0 28px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px; padding-bottom:44px; border-bottom:1px solid rgba(242,236,218,0.15);}
+  .foot-brand{font-family:'Zilla Slab',serif; font-size:1.3rem; color:var(--paper); margin-bottom:14px;}
+  .foot-grid p{font-size:0.92rem; color:rgba(242,236,218,0.65); max-width:34ch;}
+  footer h5{color:var(--brass-light); font-size:0.82rem; letter-spacing:0.03em; margin-bottom:16px; font-family:'Mukta',sans-serif; font-weight:600;}
+  footer ul{list-style:none; padding:0; margin:0;}
+  footer li{margin-bottom:10px; font-size:0.92rem;}
+  footer a:hover{color:var(--brass-light);}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-size:0.82rem; color:rgba(242,236,218,0.55); flex-wrap:wrap; gap:10px;}
+  @media (max-width:700px){.foot-grid{grid-template-columns:1fr;}}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed; right:24px; bottom:24px; z-index:200;
+    width:58px; height:58px; border-radius:50%;
+    background:#25D366; color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.6rem; box-shadow:0 14px 30px -10px rgba(0,0,0,0.4);
+  }
+
+  @media (max-width:860px){
+    .about-grid, .contact-grid{grid-template-columns:1fr; gap:44px;}
+    .tags-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <div class="nav-row">
+    <a href="#home" class="brand"><span>&#9776;</span>Jaunpur Traders</a>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+919876543210" class="nav-call">Call Now</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow-tag">Alamganj, Jaunpur — Established Wholesale Trade</span>
+      <h1>Fair pricing and consistent stock, trusted across Jaunpur</h1>
+      <p class="lede">Jaunpur Traders supplies loose and packaged tobacco to retailers and households across Alamganj and the surrounding areas — run with the same honesty for over ten years.</p>
+      <div class="hero-ctas">
+        <a href="tel:+919876543210" class="btn btn-primary">Call for Orders</a>
+        <a href="#contact" class="btn btn-ghost">Get Directions</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>10+</strong><span>Years serving Alamganj</span></div>
+        <div><strong>Daily</strong><span>Fresh stock supply</span></div>
+        <div><strong>Wholesale</strong><span>&amp; retail rates</span></div>
+      </div>
+    </div>
+    <div class="stamp-wrap">
+      <div class="photo-frame">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1626202378370-9856e4311b0e?q=80&w=900&auto=format&fit=crop" alt="Tobacco leaves" loading="eager" onerror="this.style.display='none'">
+        <div class="tex">
+          <span class="glyph">&#127811;</span>
+          <h4>Badi Masjid Road</h4>
+          <p>Syed Ali Pur, Alamganj, Jaunpur</p>
+        </div>
+      </div>
+      <div class="stamp">
+        <div class="stamp-inner"><span class="num">5.0</span><span class="lbl">★ RATED &middot; 8 REVIEWS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our Story</span>
+      <h2>A legacy of quality and trust in Jaunpur</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>At <strong>Jaunpur Traders</strong>, quality is the backbone of the tobacco trade. Situated in the heart of Alamganj, the shop has grown into a dependable destination for both wholesale and retail tobacco needs.</p>
+        <p>A commitment to fair pricing and steady supply has earned the trust of local businesses and individual customers alike — whether they're looking for loose leaf varieties or premium packaged goods.</p>
+        <div class="owner-card">
+          <span class="role">Proprietor</span>
+          <h3>Mohd Israil</h3>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box"><strong>10+</strong><span>Years of Service</span></div>
+        <div class="stat-box"><strong>100%</strong><span>Premium Quality</span></div>
+        <div class="stat-box"><strong>8</strong><span>Verified Reviews</span></div>
+        <div class="stat-box"><strong>5.0</strong><span>Average Rating</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap" style="padding:0;">
+    <div class="sec-head wrap" style="padding-top:80px;">
+      <span class="kicker">Why Buyers Choose Us</span>
+      <h2>What sets Jaunpur Traders apart</h2>
+    </div>
+    <div class="feat-list">
+      <div class="feat">
+        <span class="fnum">01</span>
+        <h3>Trusted Local Business</h3>
+        <p>Deeply rooted in Jaunpur, with a reputation built on honesty over years of trade.</p>
+      </div>
+      <div class="feat">
+        <span class="fnum">02</span>
+        <h3>Premium Quality</h3>
+        <p>Only the finest tobacco stock is sourced, checked for consistency before it reaches you.</p>
+      </div>
+      <div class="feat">
+        <span class="fnum">03</span>
+        <h3>Wholesale Pricing</h3>
+        <p>Competitive bulk rates for retailers, with fair pricing for individual buyers too.</p>
+      </div>
+      <div class="feat">
+        <span class="fnum">04</span>
+        <h3>Timely Supply</h3>
+        <p>Reliable stock availability and prompt service through working hours, every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our Inventory</span>
+      <h2>Premium tobacco selection</h2>
+      <p>From loose leaf by weight to packaged retail goods and bulk wholesale lots — stocked fresh and ready to move.</p>
+    </div>
+    <div class="tags-grid">
+      <div class="tag-card">
+        <div class="tag-hole"></div>
+        <img class="tag-img" src="https://images.unsplash.com/photo-1541544181051-e466902cd8e2?q=80&w=600&auto=format&fit=crop" alt="Loose Tobacco" loading="lazy" onerror="this.style.display='none'">
+        <h3>Loose Tobacco</h3>
+        <p>High-grade loose leaf varieties available by weight — suited to custom blends and retail repacking.</p>
+        <div class="tag-price">
+          <span>By Weight</span>
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20loose%20tobacco." class="tag-link">Inquire on WhatsApp</a>
+        </div>
+      </div>
+      <div class="tag-card">
+        <div class="tag-hole"></div>
+        <img class="tag-img" src="https://images.unsplash.com/photo-1612534572230-019d3f18e9a1?q=80&w=600&auto=format&fit=crop" alt="Packaged Products" loading="lazy" onerror="this.style.display='none'">
+        <h3>Packaged Products</h3>
+        <p>Branded and locally sourced packaged tobacco, ready for retail shelves.</p>
+        <div class="tag-price">
+          <span>Retail Ready</span>
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20packaged%20tobacco%20products." class="tag-link">Inquire on WhatsApp</a>
+        </div>
+      </div>
+      <div class="tag-card">
+        <div class="tag-hole"></div>
+        <img class="tag-img" src="https://images.unsplash.com/photo-1595304627447-068340d853b0?q=80&w=600&auto=format&fit=crop" alt="Bulk Wholesale" loading="lazy" onerror="this.style.display='none'">
+        <h3>Bulk Wholesale</h3>
+        <p>Large volume supply for retailers and businesses at unbeatable wholesale rates.</p>
+        <div class="tag-price">
+          <span>Bulk Rates</span>
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20bulk%20wholesale%20supply." class="tag-link">Inquire on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap sec">
+    <div class="review-top">
+      <span class="score">5.0</span>
+      <div>
+        <span class="stars">★★★★★</span>
+        <p style="margin:4px 0 0; color:#4a4028; font-size:0.92rem;">Based on 8 verified reviews</p>
+      </div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"Best wholesaler in the Alamganj area. The quality is consistent and the rates are very competitive — highly recommended for retailers."</p>
+        <div class="review-who">
+          <div class="avatar">R</div>
+          <div><strong>Rahul Verma</strong><span>Retail Shop Owner</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"Very professional behaviour, and they always deliver on time. Finding a trustworthy supplier in Jaunpur was hard until I found them."</p>
+        <div class="review-who">
+          <div class="avatar">A</div>
+          <div><strong>Amit Singh</strong><span>Local Customer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Get In Touch</span>
+      <h2>Visit our store</h2>
+      <p>Conveniently located on Badi Masjid Road. Drop by, call, or send an enquiry below.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <ul class="info-list">
+          <li>
+            <div class="info-ic">&#128205;</div>
+            <div><h4>Address</h4><p>Badi Masjid Road, Syed Ali Pur, Alamganj, Jamin Abdul Quadir, Uttar Pradesh &ndash; 222001</p></div>
+          </li>
+          <li>
+            <div class="info-ic">&#128222;</div>
+            <div><h4>Phone</h4><p><a href="tel:+919876543210">+91 98765 43210</a></p></div>
+          </li>
+          <li>
+            <div class="info-ic">&#128337;</div>
+            <div><h4>Working Hours</h4><p>Mon &ndash; Sat: 9:00 AM &ndash; 8:00 PM<br>Sunday Closed</p></div>
+          </li>
+        </ul>
+        <div class="map-frame">
+          <iframe loading="lazy" src="https://www.google.com/maps?q=Badi+Masjid+Road,+Alamganj,+Jaunpur,+Uttar+Pradesh+222001&output=embed" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3>Send an enquiry</h3>
+        <p>Fill this in and we'll get back to you — or message directly on WhatsApp for a quicker reply.</p>
+        <form onsubmit="event.preventDefault(); window.open('https://wa.me/919876543210?text=' + encodeURIComponent('Name: ' + this.name.value + '%0APhone: ' + this.phone.value + '%0AMessage: ' + this.message.value), '_blank');">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Jaunpur Traders</div>
+        <p>Wholesale and retail tobacco supply in Jaunpur and Alamganj, run by Mohd Israil with a commitment to quality and fair pricing.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact Info</h5>
+        <ul>
+          <li>Badi Masjid Road, Syed Ali Pur, Alamganj, Jaunpur</li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="https://www.instagram.com/abdurrahman551177/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Jaunpur Traders. All rights reserved.</span>
+      <span>Proprietor: Mohd Israil</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">&#128172;</a>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
+  menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+  document.querySelectorAll('#mainNav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+
+</body>
+</html>
